@@ -14,7 +14,11 @@ def encode(seed):
 
     seed: A URL string
     """
-    encoded_seed = urllib.parse.quote(seed, safe="/:")
+    # First unencode the seed in case of pre-existing encoding
+    unencoded_seed = urllib.parse.unquote(seed)
+
+    # Encode the plain-text seed
+    encoded_seed = urllib.parse.quote(unencoded_seed, safe="/:")
 
     return encoded_seed
 
