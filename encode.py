@@ -18,7 +18,7 @@ def encode(seed):
     unencoded_seed = urllib.parse.unquote(seed)
 
     # Encode the plain-text seed
-    encoded_seed = urllib.parse.quote(unencoded_seed, safe="/:")
+    encoded_seed = urllib.parse.quote(unencoded_seed, safe="/:?=")
 
     return encoded_seed
 
