@@ -18,6 +18,10 @@ Output txt - The desired name of the file produced by this script (with file pat
 ## Output
 The script will produce a txt file (named by the user) which will contain the same URLs from the input file but with any non-standard characters made URL-safe.
 
+## Safe characters
+Characters that should not be encoded/changed can be listed as part of the "safe" list. In this example, / : = & + and # characters will be unchanged in the output:
+`encoded_seed = urllib.parse.quote(unencoded_seed, safe="/:?=&+#")`
+
 ## Contributing
 Pull requests are welcome.  For major changes, please open an issue first to discuss what you would like to change.
 
