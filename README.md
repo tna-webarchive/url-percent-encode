@@ -1,8 +1,8 @@
 # URL percent encode
-A Python script used to make characters in seed lists "URL-safe".
+A Python script used to make characters in seed lists "URL-safe" (e.g. encoding of unicode characters in URLs to their percent-encoded equivalent) for compatibility with crawlers such as Heritrix.
 
 ## Input
-This script runs over a seed list, formatted as a text file with one URL per line.  See `./example_seed_lists/bad.txt` and `./example_seed_lists/good.txt` for examples.
+This script runs over an input list of URLs, formatted as a text file with one URL per line.  See `./example_seed_lists/bad.txt` and `./example_seed_lists/good.txt` for examples.
 
 `bad.txt` - This file contains an example list of URLs that contain characters that are not URL-safe and so cannot be crawled.
 
